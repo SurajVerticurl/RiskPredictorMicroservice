@@ -13,7 +13,7 @@ def predict_risk():
 
     # If risk level is low, update thermostat temperature in Smart Home Controller Microservice
     if risk_level == 'low':
-        update_temperature_url = 'http://localhost:5000/update-temperature'
+        update_temperature_url = 'http://52.54.211.229:5000/update-temperature'
         new_temperature = 22  # You can set the desired temperature here
         requests.post(update_temperature_url, json={'temperature': new_temperature})
 
